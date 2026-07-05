@@ -10,8 +10,8 @@ async function main() {
     const result = client.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [{
-            role: 'user', content: `What is 2+2 equals 
-
+            role: 'user', 
+            content: `What is 2+2 equals 
             Do not add anything in answer,take the samples from the examples.
                     Examples:
                       - what is 5 + 4 ?
