@@ -65,8 +65,13 @@ async function main(prompt = " ") {
         messages_DB.push({ role: 'assistant', content: rawResult })
 
         console.log(`🤖 (${parseResult.step} : ${parseResult.text})`);
+
+        if(parseResult.step.toLowerCase() === 'think'){
+            // TODO : Make a claude call to validate if thinking is right or not.
+            messages_DB.push({})
+        }
         if (parseResult.step === 'OUTPUT') break
     }
 
 }
-main("What is 4 +6 +9-3*5")
+main("What is meaning of life")
